@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib".freeze]
   s.authors = ["Akinori MUSHA".freeze]
   s.bindir = "exe".freeze
-  s.date = "2021-05-30"
+  s.date = "2021-06-04"
   s.description = "Ruby interface for the POSIX system logging facility.".freeze
   s.email = ["knu@idaemons.org".freeze]
   s.extensions = ["ext/syslog/extconf.rb".freeze]

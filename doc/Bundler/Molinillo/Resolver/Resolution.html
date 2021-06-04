@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Bundler::Molinillo::Resolver::Resolution - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+  var index_rel_prefix = "../../../";
+</script>
+
+<script src="../../../js/navigation.js" defer></script>
+<script src="../../../js/search.js" defer></script>
+<script src="../../../js/search_index.js" defer></script>
+<script src="../../../js/searcher.js" defer></script>
+<script src="../../../js/darkfish.js" defer></script>
+
+<link href="../../../css/fonts.css" rel="stylesheet">
+<link href="../../../css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../../../Object.html">Object</a>
+</div>
+
+    
+<div id="includes-section" class="nav-section">
+  <h3>Included Modules</h3>
+
+  <ul class="link-list">
+    <li><a class="include" href="../Delegates/ResolutionState.html">Bundler::Molinillo::Delegates::ResolutionState</a>
+    <li><a class="include" href="../Delegates/SpecificationProvider.html">Bundler::Molinillo::Delegates::SpecificationProvider</a>
+  </ul>
+</div>
+
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-resolve">#resolve</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Bundler::Molinillo::Resolver::Resolution">
+  <h1 id="class-Bundler::Molinillo::Resolver::Resolution" class="class">
+    class Bundler::Molinillo::Resolver::Resolution
+  </h1>
+
+  <section class="description">
+    
+<p><a href="../../../A.html"><code>A</code></a> specific resolution from a given {Resolver}</p>
+
+<p><a href="../../../A.html"><code>A</code></a> specific resolution from a given {Resolver}</p>
+
+<p><a href="../../../A.html"><code>A</code></a> specific resolution from a given {Resolver}</p>
+
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+        <dt id="Conflict">Conflict
+        <dd><p><a href="../../../A.html"><code>A</code></a> conflict that the resolution process encountered @attr [Object] requirement the requirement that immediately led to the conflict @attr [{<a href="Object">String,Nil=></a>}] requirements the requirements that caused the conflict @attr [Object, nil] existing the existing spec that was in conflict with</p>
+
+<pre>the {#possibility}</pre>
+
+<p>@attr [Object] possibility_set the set of specs that was unable to be</p>
+
+<pre>activated due to a conflict.</pre>
+
+<p>@attr [Object] locked_requirement the relevant locking requirement. @attr [Array&lt;Array&lt;Object&gt;&gt;] requirement_trees the different requirement</p>
+
+<pre>trees that led to every requirement for the conflicting name.</pre>
+
+<p>@attr [{String=&gt;Object}] activated_by_name the already-activated specs. @attr [Object] underlying_error an error that has occurred during resolution, and</p>
+
+<pre>will be raised at the end of it if no resolution is found.</pre>
+        <dt id="PossibilitySet">PossibilitySet
+        <dd><p><a href="../../../A.html"><code>A</code></a> collection of possibility states that share the same dependencies @attr [Array] dependencies the dependencies for this set of possibilities @attr [Array] possibilities the possibilities</p>
+        <dt id="UnwindDetails">UnwindDetails
+        <dd><p>Details of the state to unwind to when a conflict occurs, and the cause of the unwind @attr [Integer] state_index the index of the state to unwind to @attr [Object] state_requirement the requirement of the state we&#39;re unwinding to @attr [Array] requirement_tree for the requirement we&#39;re relaxing @attr [Array] conflicting_requirements the requirements that combined to cause the conflict @attr [Array] requirement_trees for the conflict @attr [Array] requirements_unwound_to_instead array of unwind requirements that were chosen over this unwind</p>
+      </dl>
+    </section>
+
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      <div id="attribute-i-base" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">base</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>@return [DependencyGraph] the base dependency graph to which</p>
+
+<pre class="ruby"><span class="ruby-identifier">dependencies</span> <span class="ruby-identifier">should</span> <span class="ruby-identifier">be</span> <span class="ruby-string">&#39;locked&#39;</span>
+</pre>
+        </div>
+      </div>
+      <div id="attribute-i-original_requested" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">original_requested</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>@return [Array] the dependencies that were explicitly required</p>
+        </div>
+      </div>
+      <div id="attribute-i-resolver_ui" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">resolver_ui</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>@return [UI] the <a href="../UI.html"><code>UI</code></a> that knows how to communicate feedback about the</p>
+
+<pre class="ruby"><span class="ruby-identifier">resolution</span> <span class="ruby-identifier">process</span> <span class="ruby-identifier">back</span> <span class="ruby-identifier">to</span> <span class="ruby-identifier">the</span> <span class="ruby-identifier">user</span>
+</pre>
+        </div>
+      </div>
+      <div id="attribute-i-specification_provider" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">specification_provider</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>@return [SpecificationProvider] the provider that knows about</p>
+
+<pre>dependencies, requirements, specifications, versions, etc.</pre>
+        </div>
+      </div>
+    </section>
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-new" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(specification_provider, resolver_ui, requested, base)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Initializes a new resolution. @param [SpecificationProvider] <a href="Resolution.html#attribute-i-specification_provider"><code>specification_provider</code></a></p>
+
+<pre>see {#specification_provider}</pre>
+
+<p>@param [UI] <a href="Resolution.html#attribute-i-resolver_ui"><code>resolver_ui</code></a> see {#resolver_ui} @param [Array] requested see {#original_requested} @param [DependencyGraph] base see {#base}</p>
+
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File 3.0.1/lib/ruby/3.0.0/bundler/vendor/molinillo/lib/molinillo/resolution.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">specification_provider</span>, <span class="ruby-identifier">resolver_ui</span>, <span class="ruby-identifier">requested</span>, <span class="ruby-identifier">base</span>)
+  <span class="ruby-ivar">@specification_provider</span> = <span class="ruby-identifier">specification_provider</span>
+  <span class="ruby-ivar">@resolver_ui</span> = <span class="ruby-identifier">resolver_ui</span>
+  <span class="ruby-ivar">@original_requested</span> = <span class="ruby-identifier">requested</span>
+  <span class="ruby-ivar">@base</span> = <span class="ruby-identifier">base</span>
+  <span class="ruby-ivar">@states</span> = []
+  <span class="ruby-ivar">@iteration_counter</span> = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@parents_of</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">h</span>, <span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>] = [] }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+      <div id="method-i-resolve" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">resolve</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Resolves the {#original_requested} dependencies into a full dependency</p>
+
+<pre class="ruby"><span class="ruby-identifier">graph</span>
+</pre>
+
+<p>@raise [ResolverError] if successful resolution is impossible @return [DependencyGraph] the dependency graph of successfully resolved</p>
+
+<pre class="ruby"><span class="ruby-identifier">dependencies</span>
+</pre>
+
+          <div class="method-source-code" id="resolve-source">
+            <pre><span class="ruby-comment"># File 3.0.1/lib/ruby/3.0.0/bundler/vendor/molinillo/lib/molinillo/resolution.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">resolve</span>
+  <span class="ruby-identifier">start_resolution</span>
+
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">state</span>
+    <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">state</span>.<span class="ruby-identifier">requirement</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">requirements</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">indicate_progress</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:pop_possibility_state</span>) <span class="ruby-comment"># DependencyState</span>
+      <span class="ruby-identifier">debug</span>(<span class="ruby-identifier">depth</span>) { <span class="ruby-node">&quot;Creating possibility state for #{requirement} (#{possibilities.count} remaining)&quot;</span> }
+      <span class="ruby-identifier">state</span>.<span class="ruby-identifier">pop_possibility_state</span>.<span class="ruby-identifier">tap</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">s</span>
+          <span class="ruby-identifier">states</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">s</span>)
+          <span class="ruby-identifier">activated</span>.<span class="ruby-identifier">tag</span>(<span class="ruby-identifier">s</span>)
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">process_topmost_state</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">resolve_activated_specs</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-identifier">end_resolution</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
